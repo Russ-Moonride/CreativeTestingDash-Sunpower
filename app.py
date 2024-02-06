@@ -286,6 +286,10 @@ def process_ad_set_data(data, ad_set, past_test_data):
     final_df['CTR'] = final_df['CTR'].apply(lambda x: f"{x*100:.2f}%")
     final_df['CVR'] = final_df['CVR'].apply(lambda x: f"{x*100:.2f}%")
 
+
+    final_df = final_df[final_df['Ad_Name'] != "specimen-v13_image_paid-social-LP_PID"]
+    final_df = final_df[final_df['Ad_Name'] != "specimen-v7_image_paid-social-LP_PID"]      
+          
     return final_df
 
 
