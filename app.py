@@ -23,6 +23,8 @@ client = bigquery.Client(credentials=credentials)
 bucket_name = "creativetesting_images"
 main_table_id = 'sunpower-375201.sunpower_segments.sunpower_platform_ad_level'
 creativetesting_table_id = 'sunpower-375201.sunpower_streamlit.CreativeTestingStorage'
+correct_hashed_password = "Sunpower1234"
+
 
 st.set_page_config(page_title= f"{Account} Creative Ad Testing Dash",page_icon="🧑‍🚀",layout="wide")
 
@@ -43,7 +45,6 @@ def password_protection():
       
   if not st.session_state.authenticated:
       password = st.text_input("Enter Password:", type="password")
-      correct_hashed_password = "Sunpower1234"
       
       if st.button("Login"):
           if password == correct_hashed_password:
