@@ -43,7 +43,7 @@ def password_protection():
       
   if not st.session_state.authenticated:
       password = st.text_input("Enter Password:", type="password")
-      correct_hashed_password = "FreedomSolar1234"
+      correct_hashed_password = "Sunpower1234"
       
       if st.button("Login"):
           if password == correct_hashed_password:
