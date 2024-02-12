@@ -17,9 +17,10 @@ from google.cloud import storage
 credentials = service_account.Credentials.from_service_account_info(
           st.secrets["gcp_service_account"]
       )
-
-Account = "Sunpower"
 client = bigquery.Client(credentials=credentials)
+
+#### Information to be changed when switching accounts ###
+Account = "Sunpower"
 bucket_name = "creativetesting_images"
 main_table_id = 'sunpower-375201.sunpower_segments.sunpower_platform_ad_level'
 creativetesting_table_id = 'sunpower-375201.sunpower_streamlit.CreativeTestingStorage'
