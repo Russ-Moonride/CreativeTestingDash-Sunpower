@@ -336,7 +336,8 @@ def display_images(images, captions):
     # Display images in the center columns
     for idx, image_name in enumerate(images):
         # Download the image from GCS to a temporary file
-        st.write(bucket_name, image_name)
+        st.write(bucket_name)
+        st.write(image_name)
         local_image_path = download_blob_to_temp(bucket_name, image_name)
 
         with cols[idx + 1]:  # +1 for offset due to initial white space
