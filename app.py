@@ -330,7 +330,6 @@ def get_ad_names(ad_set_name, ad_data):
 
 # Function to create columns and display images with captions
 def display_images(images, captions):
-    st.write(images)
     num_images = len(images)
     cols = st.columns(num_images + 2)  # Extra columns for white space
 
